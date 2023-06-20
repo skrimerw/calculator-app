@@ -7,10 +7,23 @@ const reset = document.querySelector("#reset")
 const del = document.querySelector("#del")
 
 let inputValue = ""
+const themesList = ["", "light-theme", "purple-theme"]
+
+window.addEventListener("load", () => {
+    let themeIndex
+
+    if (window.localStorage.getItem("theme")) {
+        themeIndex = window.localStorage.getItem("theme")
+        body.className = themesList[themeIndex]
+        themeToggler.value = themeIndex
+    } else {
+        return
+    }
+})
 
 range.addEventListener("change", () => {
-    const themesList = ["", "light-theme", "purple-theme"]
     body.className = themesList[themeToggler.value]
+    window.localStorage.setItem("theme", themeToggler.value)
 })
 
 keys.forEach(key => {
