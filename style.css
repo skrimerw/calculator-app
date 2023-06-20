@@ -1,0 +1,287 @@
+* {
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color .05s ease-in-out 0s;
+}
+
+/* Standard theme */
+
+body {
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+
+.top {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.theme-section {
+    display: flex;
+    align-items: flex-end;
+}
+
+.theme-section p {
+    margin-right: 25px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.logo {
+    color: white;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none; 
+    width: 55px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 16px;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+    height: 18px;
+    background: hsl(223, 31%, 20%);
+    border-radius: 16px;
+    width: 55px;
+    padding: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none; 
+    height: 12px;
+    width: 12px;
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    filter: brightness(1.2);
+}
+
+#theme-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:55px;
+    padding: 0 5px;
+    transform: rotateX(180deg);
+    margin-top: -7px;
+    font-size: 12px;
+}
+
+.toggler {
+    transform: rotateX(180deg);
+}
+
+#data-input {
+    background-color: hsl(224, 36%, 15%);
+    border: none;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: white;
+    padding: 25px;
+    margin-top: 25px;
+    direction: ltr;
+    caret-color: transparent;
+    outline: none;
+    text-align: right;
+    height: 5.5rem;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.bottom div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 25%, 89%);
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px hsl(28, 16%, 65%);
+    font-size: 1.8rem;
+    padding: 20px;
+    padding-bottom: 15px;
+    transition: all .1s ease-in-out .01s;
+    user-select: none;
+}
+
+.bottom div:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+.bottom div:active {
+    box-shadow: none !important;
+    transform: translateY(3px);
+}
+
+#reset {
+    grid-column: 1 / 3;
+}
+
+#reset, #del {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 3px 0px 0px hsl(224, 28%, 35%);
+    color: white;
+    font-size: 1.5rem;
+}
+
+#equals {
+    grid-column: 3 / 5;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 3px 0px 0px hsl(6, 70%, 34%);
+    color: white;
+}
+
+.error-message {
+    color: rgb(234, 62, 62);
+    font-style: italic;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+/* Light theme */
+
+.light-theme {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.light-theme .top {
+    color: hsl(60, 10%, 19%);
+} 
+
+.light-theme .logo {
+    color: hsl(60, 10%, 19%);
+}
+
+.light-theme input[type="range"]::-webkit-slider-runnable-track {
+    background: hsl(0, 5%, 81%);
+}
+
+.light-theme input[type="range"]::-webkit-slider-thumb {
+    background-color: hsl(25, 98%, 40%);
+}
+
+.light-theme #data-input {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
+.light-theme .bottom {
+    background-color: hsl(0, 5%, 81%);
+    color: hsl(60, 10%, 19%);
+}
+
+.light-theme .bottom div {
+    background-color: hsl(45, 7%, 89%);
+    box-shadow: 0px 3px 0px 0px hsl(35, 11%, 61%);
+}
+
+.light-theme #reset, 
+.light-theme #del {
+    background-color: hsl(185, 42%, 37%);
+    box-shadow: 0px 3px 0px 0px hsl(185, 58%, 25%);
+}
+
+.light-theme #equals {
+    background-color: hsl(25, 98%, 40%);
+    box-shadow: 0px 3px 0px 0px hsl(25, 99%, 27%);
+}
+
+/* Purple theme */
+
+.purple-theme {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.purple-theme .top {
+    color: hsl(52, 100%, 62%);
+} 
+
+.purple-theme .logo {
+    color: hsl(52, 100%, 62%);
+}
+
+.purple-theme input[type="range"]::-webkit-slider-runnable-track {
+    background: hsl(268, 71%, 12%);
+}
+
+.purple-theme input[type="range"]::-webkit-slider-thumb {
+    background-color: hsl(176, 100%, 44%);
+}
+
+.purple-theme #data-input {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+.purple-theme .bottom {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+.purple-theme .bottom div {
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0px 3px 0px 0px hsl(290, 70%, 36%);
+}
+
+.purple-theme #reset, 
+.purple-theme #del {
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0px 3px 0px 0px hsl(285, 91%, 52%);
+}
+
+.purple-theme #equals {
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0px 3px 0px 0px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+@media (max-width: 375px) {
+    #reset, #del {
+        font-size: 1.1rem;
+    }
+
+    .bottom {
+        gap: 10px;
+    }
+
+    .bottom div {
+        padding: 15px;
+        padding-bottom: 10px;
+    }
+}

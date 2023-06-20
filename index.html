@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Calculator app</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <section class="top">
+      <h1 class="logo">calc</h1>
+      <div class="theme-section">
+        <p>THEME</p>
+        <div class="toggler">
+          <input type="range" max="2" list="theme-selector" value="0" id="range">
+          <datalist id="theme-selector">
+            <option value="0" label="1"></option>
+            <option value="1" label="2"></option>
+            <option value="2" label="3"></option>
+          </datalist>
+        </div>
+      </div>
+    </section>
+    <div id="data-input"></div>
+    <section class="bottom">
+      <div class="key" data-id="7">7</div>
+      <div class="key" data-id="8">8</div>
+      <div class="key" data-id="9">9</div>
+      <div id="del">DEL</div>
+      <div class="key" data-id="4">4</div>
+      <div class="key" data-id="5">5</div>
+      <div class="key" data-id="6">6</div>
+      <div class="key sign" data-id="+">+</div>
+      <div class="key" data-id="1">1</div>
+      <div class="key" data-id="2">2</div>
+      <div class="key" data-id="3">3</div>
+      <div class="key sign" data-id="-">-</div>
+      <div class="key sign" data-id=".">.</div>
+      <div class="key" data-id="0">0</div>
+      <div class="key sign" data-id="/">÷</div>
+      <div class="key sign" data-id="*">×</div>
+      <div id="reset">RESET</div>
+      <div id="equals">=</div>
+    </section>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
